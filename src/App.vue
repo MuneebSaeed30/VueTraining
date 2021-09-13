@@ -3,12 +3,12 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
 
     <!-- *** interpolation *** -->
-    <div id="app-1">
+    <!-- <div id="app-1">
       <h1>{{ headerText }}</h1>
-    </div>
+    </div> -->
 
     <!-- *** directives *** -->
-    <div id="app-2">
+    <!-- <div id="app-2">
       <h1>{{ modelText }}</h1>
       <input v-model="modelText" class="form-control" />
     </div>
@@ -24,36 +24,40 @@
 
     <div id="app-4">
       <p v-html="strongHeaderText"></p>
-    </div>
+    </div> -->
 
     <!-- *** computed *** -->
-    <div id="app-5">
+    <!-- <div id="app-5">
       <p>Original message: "{{ headerText }}"</p>
       <p>Computed reversed message: "{{ reversedMessage }}"</p>
-    </div>
+    </div> -->
 
     <!-- *** Conditioning *** -->
-    <div id="app-6">
+    <!-- <div id="app-6">
       <p v-if="isShow">{{ truthyText }}</p>
       <p v-else>{{ falsyText }}</p>
-    </div>
+    </div> -->
 
     <!-- *** Looping *** -->
-    <div id="app-7">
+    <!-- <div id="app-7">
       <li v-for="(todo, index) in todos" v-bind:key="index">
         {{ todo.text }}
       </li>
-    </div>
+    </div> -->
 
     <!-- *** component rendering  *** -->
     <div id="app-8">
-      <HelloWorld msg="Welcome to Your Vue.js App" />
+      <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+      <!-- <ParentComponent /> -->
+      <CreateUser />
     </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+// import HelloWorld from "./components/HelloWorld";
+// import ParentComponent from "./components/parentComponent";
+import CreateUser from "./components/createUser";
 
 export default {
   name: "App",
@@ -83,7 +87,9 @@ export default {
     },
   },
   components: {
-    HelloWorld,
+    // HelloWorld,
+    // ParentComponent,
+    CreateUser,
   },
 };
 </script>
