@@ -49,7 +49,24 @@
     <div id="app-8">
       <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
       <!-- <ParentComponent /> -->
-      <CreateUser />
+      <!-- <CreateUser /> -->
+
+      <!-- <SlotComponent>
+        <h1> Received default slot content from parent </h1>
+      </SlotComponent> -->
+
+      <!-- <SlotComponent>
+        <template v-slot:namedSlot>
+          <h1> Received named slot content from parent </h1>
+        </template>
+      </SlotComponent> -->
+
+      <SlotComponent>
+        <template #scopedSlot="{ trainer2 }"> 
+          {{ trainer2.firstName }} {{ trainer2.lastName }}
+        </template>
+      </SlotComponent>
+      <!-- short hand for v-slot is '#' -->
     </div>
   </div>
 </template>
@@ -57,7 +74,8 @@
 <script>
 // import HelloWorld from "./components/HelloWorld";
 // import ParentComponent from "./components/parentComponent";
-import CreateUser from "./components/createUser";
+// import CreateUser from "./components/createUser";
+import SlotComponent from "./components/slotComponent";
 
 export default {
   name: "App",
@@ -89,7 +107,8 @@ export default {
   components: {
     // HelloWorld,
     // ParentComponent,
-    CreateUser,
+    // CreateUser,
+    SlotComponent,
   },
 };
 </script>
